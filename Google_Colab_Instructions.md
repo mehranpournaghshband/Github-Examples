@@ -1,4 +1,4 @@
-# 🚀 How to Run Minervini Stock Analyzer in Google Colab
+# 🚀 How to Run TradeStock (Minervini Stock Analyzer) in Google Colab
 
 ## 📋 Step-by-Step Instructions
 
@@ -8,7 +8,7 @@
 - Click "New Notebook"
 
 ### 2. Create the Cells
-Copy and paste the following code blocks into separate cells in your Colab notebook:
+Copy and paste the following TradeStock code blocks into separate cells in your Colab notebook:
 
 ---
 

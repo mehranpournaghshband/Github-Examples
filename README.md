@@ -1,4 +1,4 @@
-# 📊 Minervini Stock Buying Checklist Analyzer
+# 📊 TradeStock - Minervini Stock Buying Checklist Analyzer
 
 A comprehensive Python program that implements **Mark Minervini's Stock Buying Checklist** to help decide whether to buy a stock or not. This educational tool analyzes stocks using Minervini's proven criteria including trend templates, VCP base formations, and entry signals.
 
@@ -26,7 +26,11 @@ This analyzer implements all of Mark Minervini's key stock selection criteria:
 
 ## 🛠 Installation
 
-1. **Clone or download this repository**
+1. **Clone this repository:**
+```bash
+git clone https://github.com/YOUR-USERNAME/TradeStock.git
+cd TradeStock
+```
 
 2. **Install required dependencies:**
 ```bash
@@ -43,13 +47,16 @@ pip install -r requirements.txt
 
 ### Option 1: Command Line Analysis
 ```bash
-python minervini_stock_analyzer.py AAPL
+python3 minervini_stock_analyzer.py AAPL
 ```
 
 ### Option 2: Interactive Demo
 ```bash
-python demo_minervini_analyzer.py
+python3 demo_minervini_analyzer.py
 ```
+
+### Option 3: Google Colab
+Follow the instructions in `Google_Colab_Instructions.md` to run in Google Colab.
 
 The demo offers:
 - Analyze multiple sample stocks
@@ -181,6 +188,15 @@ This is an educational project. Feel free to:
 - Suggest improvements
 - Add new features
 - Share educational enhancements
+
+## 📄 License
+
+This project is for educational purposes. Please respect the educational nature of this tool and use it responsibly.
+
+## 🙏 Acknowledgments
+
+- Mark Minervini for the original methodology
+- The trading community for continued education and support
 
 ---
 
