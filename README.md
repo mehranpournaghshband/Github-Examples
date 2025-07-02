@@ -28,7 +28,7 @@ This analyzer implements all of Mehran's key stock selection criteria:
 
 1. **Clone this repository:**
 ```bash
-git clone https://github.com/YOUR-USERNAME/TradeStock.git
+git clone https://github.com/mehranpournaghshband/TradeStock.git
 cd TradeStock
 ```
 
