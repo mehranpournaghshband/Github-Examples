@@ -1,10 +1,10 @@
-# 📊 TradeStock - Minervini Stock Buying Checklist Analyzer
+# 📊 TradeStock - Mehran Stock Buying Checklist Analyzer
 
-A comprehensive Python program that implements **Mark Minervini's Stock Buying Checklist** to help decide whether to buy a stock or not. This educational tool analyzes stocks using Minervini's proven criteria including trend templates, VCP base formations, and entry signals.
+A comprehensive Python program that implements **Mehran's Stock Buying Checklist** to help decide whether to buy a stock or not. This educational tool analyzes stocks using Mehran's proven criteria including trend templates, VCP base formations, and entry signals.
 
 ## 🎯 What This Program Does
 
-This analyzer implements all of Mark Minervini's key stock selection criteria:
+This analyzer implements all of Mehran's key stock selection criteria:
 
 ### Phase 1: Trend Template ✅
 - Price above 50, 150, and 200-day Simple Moving Averages (SMAs)
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 ### Option 1: Command Line Analysis
 ```bash
-python3 minervini_stock_analyzer.py AAPL
+python3 mehran_stock_analyzer.py AAPL
 ```
 
 ### Option 2: Interactive Demo
