@@ -1,0 +1,10 @@
+Minervini Stock Analysis Report
+Symbol: AAPL
+Date: 2025-07-02 16:14:09
+Recommendation: HOLD/AVOID
+Phase 1 Score: 2/5
+Phase 2 Score: 0/3
+Entry Signal: False
+Current Price: $211.12
+Suggested Stop Loss: $191.17
+Risk Percentage: 9.5%
