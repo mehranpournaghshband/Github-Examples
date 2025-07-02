@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Setup script for Minervini Stock Analyzer
-==========================================
+Setup script for Mehran Stock Analyzer
+=======================================
 
 This script helps you install dependencies and test the analyzer.
 """
@@ -54,10 +54,10 @@ def run_quick_test():
     print("\n🚀 Running quick test with AAPL...")
     
     try:
-        from minervini_stock_analyzer import MinerviniAnalyzer
+        from mehran_stock_analyzer import MehranAnalyzer
         
         # Quick test
-        analyzer = MinerviniAnalyzer("AAPL")
+        analyzer = MehranAnalyzer("AAPL")
         if analyzer.fetch_data("1y"):  # Use shorter period for quick test
             print("✅ Data fetch successful")
             print("✅ Technical indicators calculated")
@@ -73,7 +73,7 @@ def run_quick_test():
 
 def main():
     """Main setup function"""
-    print("🔧 MINERVINI STOCK ANALYZER SETUP")
+    print("🔧 MEHRAN STOCK ANALYZER SETUP")
     print("=" * 40)
     
     # Check Python version
@@ -97,8 +97,8 @@ def main():
     print("\n" + "=" * 40)
     print("🎉 SETUP COMPLETE!")
     print("\nYou can now run:")
-    print("  python demo_minervini_analyzer.py")
-    print("  python minervini_stock_analyzer.py AAPL")
+    print("  python demo_mehran_analyzer.py")
+    print("  python mehran_stock_analyzer.py AAPL")
     print("\nHappy analyzing! 📈")
 
 if __name__ == "__main__":

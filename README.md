@@ -52,7 +52,7 @@ python3 mehran_stock_analyzer.py AAPL
 
 ### Option 2: Interactive Demo
 ```bash
-python3 demo_minervini_analyzer.py
+python3 demo_mehran_analyzer.py
 ```
 
 ### Option 3: Google Colab
@@ -67,7 +67,7 @@ The demo offers:
 ## 📈 Sample Output
 
 ```
-🔍 MINERVINI STOCK ANALYSIS: AAPL
+🔍 MEHRAN STOCK ANALYSIS: AAPL
 ============================================================
 
 📊 PHASE 1: TREND TEMPLATE
@@ -103,7 +103,7 @@ Phase 2 Score: 3/3 ✅ PASS
 
 ============================================================
 🎯 RECOMMENDATION: 🟢 BUY CANDIDATE
-This stock meets Minervini's criteria and shows strong setup!
+This stock meets Mehran's criteria and shows strong setup!
 
 💰 RISK MANAGEMENT
 --------------------
@@ -116,17 +116,17 @@ Position Size: Risk no more than 1-2% of portfolio on this trade
 
 The program creates several educational files:
 
-1. **Charts**: `SYMBOL_minervini_analysis.png`
+1. **Charts**: `SYMBOL_mehran_analysis.png`
    - Price with all moving averages
    - Volume analysis
    - 52-week high/low reference lines
 
-2. **Analysis Reports**: `SYMBOL_minervini_report_TIMESTAMP.txt`
+2. **Analysis Reports**: `SYMBOL_mehran_report_TIMESTAMP.txt`
    - Detailed scoring breakdown
    - Risk management suggestions
    - Entry and exit levels
 
-3. **Demo Summary**: `minervini_demo_summary_TIMESTAMP.txt`
+3. **Demo Summary**: `mehran_demo_summary_TIMESTAMP.txt`
    - Comparative analysis of multiple stocks
    - Buy vs. avoid recommendations
 
@@ -148,7 +148,7 @@ The program generates educational charts showing:
 ## 📚 Understanding the Method
 
 ### Why This Works
-Mark Minervini's approach identifies stocks that:
+Mehran's approach identifies stocks that:
 1. **Are in strong uptrends** (trend template)
 2. **Have proper base formations** (VCP pattern)
 3. **Break out with institutional support** (volume confirmation)
@@ -160,7 +160,7 @@ Mark Minervini's approach identifies stocks that:
 
 ## ⚠️ Important Disclaimers
 
-1. **Educational Purpose**: This tool is for learning Minervini's methodology
+1. **Educational Purpose**: This tool is for learning Mehran's methodology
 2. **Not Financial Advice**: Always do your own research and consult professionals
 3. **Market Risk**: All trading involves risk of loss
 4. **Historical Data**: Past performance doesn't guarantee future results
@@ -176,8 +176,8 @@ You can modify the analyzer by:
 ## 📖 Further Learning
 
 To deepen your understanding:
-- Read Mark Minervini's books: "Trade Like a Stock Market Wizard"
-- Study his SEPA methodology
+- Learn systematic trading methodologies
+- Study technical analysis principles
 - Practice with paper trading first
 - Join trading communities for discussion
 
@@ -195,9 +195,9 @@ This project is for educational purposes. Please respect the educational nature 
 
 ## 🙏 Acknowledgments
 
-- Mark Minervini for the original methodology
 - The trading community for continued education and support
+- Technical analysis pioneers for foundational knowledge
 
 ---
 
-**Remember**: This tool helps you learn and apply Minervini's criteria systematically, but successful trading requires practice, discipline, and continuous learning. Always manage your risk appropriately!
+**Remember**: This tool helps you learn and apply Mehran's criteria systematically, but successful trading requires practice, discipline, and continuous learning. Always manage your risk appropriately!

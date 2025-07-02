@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Minervini Stock Buying Checklist Analyzer
-==========================================
+Mehran Stock Buying Checklist Analyzer
+=======================================
 
-This program implements Mark Minervini's stock buying criteria including:
+This program implements Mehran's stock buying criteria including:
 - Trend Template (Phase 1)
 - VCP Base Formation (Phase 2) 
 - Entry Trigger Analysis
 
-Usage: python minervini_stock_analyzer.py SYMBOL
-Example: python minervini_stock_analyzer.py AAPL
+Usage: python mehran_stock_analyzer.py SYMBOL
+Example: python mehran_stock_analyzer.py AAPL
 """
 
 import yfinance as yf
@@ -22,7 +22,7 @@ import sys
 import warnings
 warnings.filterwarnings('ignore')
 
-class MinerviniAnalyzer:
+class MehranAnalyzer:
     def __init__(self, symbol):
         self.symbol = symbol.upper()
         self.data = None
@@ -47,6 +47,9 @@ class MinerviniAnalyzer:
     
     def _calculate_indicators(self):
         """Calculate all required technical indicators"""
+        if self.data is None:
+            return
+            
         df = self.data
         
         # Simple Moving Averages
@@ -72,7 +75,10 @@ class MinerviniAnalyzer:
         self.data = df
     
     def check_trend_template(self):
-        """Phase 1: Check Minervini's Trend Template criteria"""
+        """Phase 1: Check Mehran's Trend Template criteria"""
+        if self.data is None:
+            return {}
+            
         latest = self.data.iloc[-1]
         prev_50 = self.data.iloc[-50] if len(self.data) >= 50 else self.data.iloc[0]
         
@@ -123,7 +129,7 @@ class MinerviniAnalyzer:
     
     def detect_vcp_pattern(self, lookback_days=60):
         """Phase 2: Detect VCP (Volatility Contraction Pattern)"""
-        if len(self.data) < lookback_days:
+        if self.data is None or len(self.data) < lookback_days:
             return {'vcp_detected': False, 'reason': 'Insufficient data for VCP analysis'}
         
         recent_data = self.data.tail(lookback_days)
@@ -245,7 +251,7 @@ class MinerviniAnalyzer:
     
     def _analyze_tightness(self, recent_data):
         """Check for price tightening in recent bars"""
-        if len(recent_data) < 5:
+        if self.data is None or len(recent_data) < 5:
             return {
                 'price_tightening': {
                     'pass': False,
@@ -269,7 +275,7 @@ class MinerviniAnalyzer:
     
     def check_breakout_signal(self):
         """Check for breakout entry signal"""
-        if len(self.data) < 20:
+        if self.data is None or len(self.data) < 20:
             return {'breakout_signal': False, 'reason': 'Insufficient data'}
         
         latest = self.data.iloc[-1]
@@ -293,11 +299,11 @@ class MinerviniAnalyzer:
         }
     
     def analyze_stock(self):
-        """Perform complete Minervini analysis"""
-        if not self.fetch_data():
+        """Perform complete Mehran analysis"""
+        if not self.fetch_data() or self.data is None:
             return None
         
-        print(f"\n🔍 MINERVINI STOCK ANALYSIS: {self.symbol}")
+        print(f"\n🔍 MEHRAN STOCK ANALYSIS: {self.symbol}")
         print("=" * 60)
         
         # Phase 1: Trend Template
@@ -351,7 +357,7 @@ class MinerviniAnalyzer:
         
         if overall_pass:
             print("🎯 RECOMMENDATION: 🟢 BUY CANDIDATE")
-            print("This stock meets Minervini's criteria and shows strong setup!")
+            print("This stock meets Mehran's criteria and shows strong setup!")
         else:
             print("⚠️  RECOMMENDATION: 🔴 DO NOT BUY")
             print("This stock does not meet sufficient criteria. Wait for better setup.")
@@ -407,7 +413,7 @@ class MinerviniAnalyzer:
         ax1.axhline(y=latest['52W_High'], color='green', linestyle=':', alpha=0.5, label='52W High')
         ax1.axhline(y=latest['52W_Low'], color='red', linestyle=':', alpha=0.5, label='52W Low')
         
-        ax1.set_title(f'{self.symbol} - Minervini Analysis Chart', fontsize=16, fontweight='bold')
+        ax1.set_title(f'{self.symbol} - Mehran Analysis Chart', fontsize=16, fontweight='bold')
         ax1.set_ylabel('Price ($)', fontsize=12)
         ax1.legend(loc='upper left')
         ax1.grid(True, alpha=0.3)
@@ -431,20 +437,20 @@ class MinerviniAnalyzer:
             plt.savefig(save_path, dpi=300, bbox_inches='tight')
             print(f"Chart saved to {save_path}")
         else:
-            plt.savefig(f'{self.symbol}_minervini_analysis.png', dpi=300, bbox_inches='tight')
-            print(f"Chart saved to {self.symbol}_minervini_analysis.png")
+            plt.savefig(f'{self.symbol}_mehran_analysis.png', dpi=300, bbox_inches='tight')
+            print(f"Chart saved to {self.symbol}_mehran_analysis.png")
         
         plt.show()
 
 def main():
     """Main function to run the analyzer"""
     if len(sys.argv) != 2:
-        print("Usage: python minervini_stock_analyzer.py <SYMBOL>")
-        print("Example: python minervini_stock_analyzer.py AAPL")
+        print("Usage: python mehran_stock_analyzer.py <SYMBOL>")
+        print("Example: python mehran_stock_analyzer.py AAPL")
         sys.exit(1)
     
     symbol = sys.argv[1]
-    analyzer = MinerviniAnalyzer(symbol)
+    analyzer = MehranAnalyzer(symbol)
     
     # Run analysis
     result = analyzer.analyze_stock()
@@ -456,10 +462,10 @@ def main():
         
         # Export results to file
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_file = f"{symbol}_minervini_report_{timestamp}.txt"
+        report_file = f"{symbol}_mehran_report_{timestamp}.txt"
         
         with open(report_file, 'w') as f:
-            f.write(f"Minervini Stock Analysis Report\n")
+            f.write(f"Mehran Stock Analysis Report\n")
             f.write(f"Symbol: {result['symbol']}\n")
             f.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
             f.write(f"Recommendation: {result['recommendation']}\n")

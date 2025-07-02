@@ -88,14 +88,14 @@ After renaming, your repository will be:
 - **Repository Name**: `TradeStock`
 - **URL**: `https://github.com/YOUR-USERNAME/TradeStock`
 - **Clone URL**: `https://github.com/YOUR-USERNAME/TradeStock.git`
-- **Description**: "Minervini Stock Buying Checklist Analyzer - Educational tool for systematic stock analysis"
+- **Description**: "Mehran Stock Buying Checklist Analyzer - Educational tool for systematic stock analysis"
 
 ## 📝 Suggested Repository Description
 
 When you rename, consider updating the repository description to:
 
 ```
-📊 Educational tool implementing Mark Minervini's Stock Buying Checklist for systematic stock analysis. Features trend templates, VCP pattern detection, and automated buy/sell recommendations with risk management.
+📊 Educational tool implementing Mehran's Stock Buying Checklist for systematic stock analysis. Features trend templates, VCP pattern detection, and automated buy/sell recommendations with risk management.
 ```
 
 ## 🏷️ Recommended Topics/Tags
@@ -104,7 +104,7 @@ Add these topics to make your repository discoverable:
 
 - `stock-analysis`
 - `trading`
-- `minervini`
+- `mehran`
 - `vcp-pattern`
 - `technical-analysis`
 - `python`

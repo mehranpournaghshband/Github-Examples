@@ -1,4 +1,4 @@
-# 🚀 How to Run TradeStock (Minervini Stock Analyzer) in Google Colab
+# 🚀 How to Run TradeStock (Mehran Stock Analyzer) in Google Colab
 
 ## 📋 Step-by-Step Instructions
 
@@ -35,7 +35,7 @@ from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')
 
-class MinerviniAnalyzer:
+class MehranAnalyzer:
     def __init__(self, symbol):
         self.symbol = symbol.upper()
         self.data = None
@@ -85,7 +85,7 @@ class MinerviniAnalyzer:
         self.data = df
     
     def check_trend_template(self):
-        """Phase 1: Check Minervini's Trend Template criteria"""
+        """Phase 1: Check Mehran's Trend Template criteria"""
         latest = self.data.iloc[-1]
         
         results = {}
@@ -193,11 +193,11 @@ class MinerviniAnalyzer:
         }
     
     def analyze_stock(self):
-        """Perform complete Minervini analysis"""
+        """Perform complete Mehran analysis"""
         if not self.fetch_data():
             return None
         
-        print(f"\n🔍 MINERVINI STOCK ANALYSIS: {self.symbol}")
+        print(f"\n🔍 MEHRAN STOCK ANALYSIS: {self.symbol}")
         print("=" * 60)
         
         # Phase 1: Trend Template
@@ -251,7 +251,7 @@ class MinerviniAnalyzer:
         
         if overall_pass:
             print("🎯 RECOMMENDATION: 🟢 BUY CANDIDATE")
-            print("This stock meets Minervini's criteria and shows strong setup!")
+            print("This stock meets Mehran's criteria and shows strong setup!")
         else:
             print("⚠️  RECOMMENDATION: 🔴 DO NOT BUY")
             print("This stock does not meet sufficient criteria. Wait for better setup.")
@@ -307,7 +307,7 @@ class MinerviniAnalyzer:
         ax1.axhline(y=latest['52W_High'], color='green', linestyle=':', alpha=0.5, label='52W High')
         ax1.axhline(y=latest['52W_Low'], color='red', linestyle=':', alpha=0.5, label='52W Low')
         
-        ax1.set_title(f'{self.symbol} - Minervini Analysis Chart', fontsize=16, fontweight='bold')
+        ax1.set_title(f'{self.symbol} - Mehran Analysis Chart', fontsize=16, fontweight='bold')
         ax1.set_ylabel('Price ($)', fontsize=12)
         ax1.legend(loc='upper left')
         ax1.grid(True, alpha=0.3)
@@ -325,7 +325,7 @@ class MinerviniAnalyzer:
         
         print(f"📊 Chart generated for {self.symbol}")
 
-print("✅ Minervini Analyzer class loaded successfully!")
+print("✅ Mehran Analyzer class loaded successfully!")
 ```
 
 ---
@@ -342,7 +342,7 @@ print(f"🔍 Analyzing {STOCK_SYMBOL}...")
 print("This may take a moment to fetch real-time data...\n")
 
 # Create analyzer and run analysis
-analyzer = MinerviniAnalyzer(STOCK_SYMBOL)
+analyzer = MehranAnalyzer(STOCK_SYMBOL)
 result = analyzer.analyze_stock()
 
 if result:
@@ -373,7 +373,7 @@ avoid_stocks = []
 for stock in stocks_to_analyze:
     print(f"🔍 Analyzing {stock}...")
     
-    analyzer = MinerviniAnalyzer(stock)
+    analyzer = MehranAnalyzer(stock)
     result = analyzer.analyze_stock()
     
     if result:
@@ -410,10 +410,10 @@ print(f"\n📈 Analysis completed for {len(results)} stocks!")
 # 📚 EDUCATIONAL EXPLANATION
 
 explanation = """
-📚 MINERVINI'S STOCK BUYING CHECKLIST EXPLAINED
-==============================================
+📚 MEHRAN'S STOCK BUYING CHECKLIST EXPLAINED
+============================================
 
-Mark Minervini's method focuses on identifying stocks in strong uptrends 
+Mehran's method focuses on identifying stocks in strong uptrends 
 with proper base formations before breakouts. Here's what this analyzer checks:
 
 PHASE 1: TREND TEMPLATE ✅
@@ -479,7 +479,7 @@ def custom_analysis(symbol,
     print(f"  • Phase 2 min score: {phase2_min_score}/3")
     print("=" * 50)
     
-    analyzer = MinerviniAnalyzer(symbol)
+    analyzer = MehranAnalyzer(symbol)
     if analyzer.fetch_data():
         # Custom trend template check
         latest = analyzer.data.iloc[-1]
